@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=3 uid="uid://bbl05jn66tgu5"]
+
+[ext_resource type="Script" path="res://personagens/scripts/prota.gd" id="1_iws1w"]
+[ext_resource type="Script" path="res://cenas/cena-inicial.gd" id="2_inm2w"]
+[ext_resource type="Texture2D" uid="uid://dnkr2g81r7rmh" path="res://(DEMO) Lords Of Pain - Old School Isometric Assets/playable character/warrior/warrior_armed_idle/SE/warrior_armed_idle_SE_315.0_0.png" id="2_watuj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nmorj"]
+size = Vector2(17, 14)
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_iws1w")
+
+[node name="prota" type="CharacterBody2D" parent="."]
+position = Vector2(602, 306)
+script = ExtResource("2_inm2w")
+
+[node name="Sprite2D" type="Sprite2D" parent="prota"]
+texture = ExtResource("2_watuj")
+
+[node name="colisao" type="CollisionShape2D" parent="prota"]
+show_behind_parent = true
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_nmorj")
