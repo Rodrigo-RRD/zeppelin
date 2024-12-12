@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c5wbb8wxn4gr0"]
+
+[ext_resource type="PackedScene" uid="uid://dheuig8wa4sjw" path="res://cenas/decoracoes/decoracao.tscn" id="1_hc8a8"]
+
+[node name="Cogumelo" instance=ExtResource("1_hc8a8")]
+position = Vector2(250, 70)
+_textures_list = Array[String](["D:/backs/workspace/Godot/zeppelin-main/Tiny Swords (Update 010)/Deco/01.png", "D:/backs/workspace/Godot/zeppelin-main/Tiny Swords (Update 010)/Deco/02.png", "D:/backs/workspace/Godot/zeppelin-main/Tiny Swords (Update 010)/Deco/03.png"])

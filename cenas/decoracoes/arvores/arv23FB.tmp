@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://4pwyd5k21eg"]
+
+[ext_resource type="Script" path="res://cenas/decoracoes/arvores/script/arvores.gd" id="1_e4o3h"]
+[ext_resource type="Texture2D" uid="uid://hwf2le2a07p5" path="res://Tiny Swords (Update 010)/Resources/Trees/Tree.png" id="1_rka64"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hdkga"]
+radius = 13.0384
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cn36"]
+atlas = ExtResource("1_rka64")
+region = Rect2(0, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4tqhd"]
+atlas = ExtResource("1_rka64")
+region = Rect2(192, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4snwq"]
+atlas = ExtResource("1_rka64")
+region = Rect2(384, 0, 192, 192)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1br8g"]
+atlas = ExtResource("1_rka64")
+region = Rect2(576, 0, 192, 192)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aho0q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cn36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4tqhd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4snwq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1br8g")
+}],
+"loop": true,
+"name": &"Arvore",
+"speed": 15.0
+}]
+
+[node name="Arvores" type="Node2D"]
+script = ExtResource("1_e4o3h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_hdkga")
+one_way_collision_margin = 0.0
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(0, -1)
+shape = SubResource("CircleShape2D_hdkga")
+one_way_collision_margin = 0.0
+
+[node name="Arvore" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -74)
+sprite_frames = SubResource("SpriteFrames_aho0q")
+animation = &"Arvore"
+autoplay = "Arvore"
+frame_progress = 0.0585537

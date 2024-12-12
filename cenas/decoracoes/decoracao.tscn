@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://dheuig8wa4sjw"]
+
+[ext_resource type="Script" path="res://cenas/decoracoes/decoracao.gd" id="1_w3xl6"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wl5pc"]
+size = Vector2(51.5, 49)
+
+[node name="Decoracao" type="Node2D"]
+y_sort_enabled = true
+position = Vector2(-14, -25)
+script = ExtResource("1_w3xl6")
+
+[node name="Colisao" type="CollisionShape2D" parent="."]
+position = Vector2(14, 14)
+shape = SubResource("RectangleShape2D_wl5pc")
+
+[node name="Textura1" type="Sprite2D" parent="."]
+position = Vector2(10, 11)
+
+[node name="Textura2" type="Sprite2D" parent="."]
+position = Vector2(-1, 30)
+
+[node name="Textura3" type="Sprite2D" parent="."]
+position = Vector2(31, 26)

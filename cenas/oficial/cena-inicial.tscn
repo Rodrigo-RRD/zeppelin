@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://bayi5ragqg4mk"]
+
+[ext_resource type="PackedScene" uid="uid://dljc8yqdysuoq" path="res://Terrain/GerenciamentoTerreno.tscn" id="1_wpxb7"]
+[ext_resource type="PackedScene" uid="uid://dxq6vub1g8bmm" path="res://cenas/Factions/baseCharacter.tscn" id="2_nmif8"]
+[ext_resource type="PackedScene" uid="uid://ci6n0134kykkg" path="res://cenas/decoracoes/ecosistema.tscn" id="3_8h2mi"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GerenciamentoTerreno" parent="." instance=ExtResource("1_wpxb7")]
+position = Vector2(1389, 891)
+
+[node name="baseCharacter" parent="." instance=ExtResource("2_nmif8")]
+y_sort_enabled = true
+position = Vector2(6137, 1290)
+
+[node name="ecosistema" parent="." instance=ExtResource("3_8h2mi")]
+position = Vector2(1389, 891)
